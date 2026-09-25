@@ -1,7 +1,6 @@
 aid: appbrilliance
 name: AppBrilliance
-description: 'AppBrilliance is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'AppBrilliance is revolutionizing digital transactions with its novel Agentic Payments Platform. It enables seamless integration of instant payment systems (RTP & FedNow) and open banking protocols for secure, frictionless transactions. The company holds 9 US patents and focuses on secure, agentic payment solutions for enterprises.'
 url: https://raw.githubusercontent.com/api-evangelist/appbrilliance/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -11,13 +10,62 @@ specificationVersion: '0.20'
 created: '2026-09-25'
 modified: '2026-09-25'
 tags:
-- Company
-apis: []
+- Payments
+- FinTech
+- AgenticPayments
+- OpenBanking
+- Enterprise
+apis:
+  - name: Money API
+    description: Real-Time Funding API providing transaction operations.
+    humanURL: https://dev.appbrilliance.com/docs/moneyapi/
+    baseURL: null
+
+  - aid: appbrilliance:appbrilliance-api
+
+    name: AppBrilliance API
+
+    description: 'AppBrilliance API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-09-25);
+
+      not the provider''s own document.'
+
+    humanURL: https://dev.appbrilliance.com/docs/moneyapi/transactions.html
+
+    baseURL: https://customer.api.securenet.live
+
+    properties:
+
+    - type: OpenAPI
+
+      url: openapi/_ae-authored/appbrilliance-openapi-generated.yml
+
+      x-provenance: generated
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/appbrilliance-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://appbrilliance.com
+- type: Documentation
+  url: https://dev.appbrilliance.com/docs/moneyapi/
+- type: APIReference
+  url: https://dev.appbrilliance.com/docs/moneyapi/
+- type: GettingStarted
+  url: https://dev.appbrilliance.com/docs/moneyapi/getstarted.html
+- type: Support
+  url: https://appbrilliance.com/contact-us/
+- type: PrivacyPolicy
+  url: https://appbrilliance.com/privacy-policy/
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are HTML shells rendered by JavaScript, no machine‑readable spec found.
+  evidence:
+    - url: https://dev.appbrilliance.com/docs/moneyapi/
+      status: 200
+  checked: 2026-09-25
