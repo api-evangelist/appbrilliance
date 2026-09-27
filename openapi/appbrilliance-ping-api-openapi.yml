@@ -1,0 +1,51 @@
+openapi: 3.2.0
+info:
+  title: AppBrilliance Ping API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 2 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; AppBrilliance has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 2
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://dev.appbrilliance.com/docs/moneyapi/transactions.html
+servers:
+- url: https://customer.api.securenet.live
+tags:
+- name: Ping
+paths:
+  /ping/:
+    get:
+      operationId: get_ping
+      tags:
+      - Ping
+      summary: The GET /ping/ method is used to confirm basic integration is working, the…
+      description: Returns the current UTC time to confirm integration.
+      x-source: https://dev.appbrilliance.com/docs/moneyapi/transactions.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPingResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetPingResponse:
+      type: object
+      properties:
+        success:
+          type: string
+          description: Indicates success of the request.
+        time:
+          type: number
+          description: Current UTC time as a Unix timestamp with fractional seconds.

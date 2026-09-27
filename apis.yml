@@ -16,30 +16,30 @@ tags:
 - OpenBanking
 - Enterprise
 apis:
-  - name: Money API
-    description: Real-Time Funding API providing transaction operations.
-    humanURL: https://dev.appbrilliance.com/docs/moneyapi/
-    baseURL: null
-
-  - aid: appbrilliance:appbrilliance-api
-
-    name: AppBrilliance API
-
-    description: 'AppBrilliance API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-09-25);
-
-      not the provider''s own document.'
-
-    humanURL: https://dev.appbrilliance.com/docs/moneyapi/transactions.html
-
-    baseURL: https://customer.api.securenet.live
-
-    properties:
-
-    - type: OpenAPI
-
-      url: openapi/_ae-authored/appbrilliance-openapi-generated.yml
-
-      x-provenance: generated
+- name: Money API
+  description: Real-Time Funding API providing transaction operations.
+  humanURL: https://dev.appbrilliance.com/docs/moneyapi/
+  baseURL: null
+- aid: appbrilliance:appbrilliance-ping-api
+  name: AppBrilliance Ping API
+  description: The Ping API from AppBrilliance — 1 operation(s) for ping.
+  humanURL: https://dev.appbrilliance.com/docs/moneyapi/
+  baseURL: https://customer.api.securenet.live
+  tags:
+  - Ping
+  properties:
+  - type: OpenAPI
+    url: openapi/appbrilliance-ping-api-openapi.yml
+- aid: appbrilliance:appbrilliance-transaction-api
+  name: AppBrilliance Transaction API
+  description: The Transaction API from AppBrilliance — 1 operation(s) for transaction.
+  humanURL: https://dev.appbrilliance.com/docs/moneyapi/
+  baseURL: https://customer.api.securenet.live
+  tags:
+  - Transaction
+  properties:
+  - type: OpenAPI
+    url: openapi/appbrilliance-transaction-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
