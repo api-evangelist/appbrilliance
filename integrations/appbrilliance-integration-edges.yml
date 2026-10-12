@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/appbrilliance/integrations
+- https://n8n.io/integrations/appbrilliance/
+- https://composio.dev/toolkits/appbrilliance
+- https://monid.ai/tools/appbrilliance
+checked:
+- https://composio.dev/toolkits/appbrilliance
+- https://monid.ai/tools/appbrilliance
+- https://n8n.io/integrations/appbrilliance/
+- https://zapier.com/apps/appbrilliance/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
